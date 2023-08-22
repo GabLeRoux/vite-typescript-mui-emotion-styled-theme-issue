@@ -2,6 +2,9 @@
 
 This repository is a minimal reproduction of an issue involving `vite`, `typescript`, `@mui/material`, `@emotion/styled` and theme.
 
+**This project relates to the following issue:**  
+https://github.com/vitejs/vite/issues/14176
+
 ## Problem Description
 
 When running tests, there's an error that occurs with theme properties being undefined. This seems to involve a combination of `@emotion/styled` and `@mui/material` theme provider.
