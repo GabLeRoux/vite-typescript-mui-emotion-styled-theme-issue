@@ -1,32 +1,28 @@
-import React, { useState } from 'react'
-import logo from './logo.svg'
-import './App.css'
+import Button from './button/Button';
+import { ThemeProvider } from '@emotion/react'; // <- Emotion's ThemeProvider
+import React from 'react';
+import { useAppStore } from './store';
+import { darkTheme } from './themes/dark.theme';
+import { lightTheme } from './themes/light.theme';
 
 function App() {
-  const [count, setCount] = useState(0)
+    const isDarkTheme = useAppStore((state) => state.isDarkTheme);
+    const toggleTheme = useAppStore((state) => state.toggleTheme);
 
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React!</p>
-        <p>
-          <button onClick={() => setCount(count => count + 1)}>count is: {count}</button>
-        </p>
-        <p>
-          Edit <code>App.tsx</code> and save to test HMR updates.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  )
+    const containerStyle = {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: '100vh',
+    };
+
+    return (
+        <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
+            <div style={containerStyle}>
+                <Button isDarkTheme={isDarkTheme} toggleTheme={toggleTheme} />
+            </div>
+        </ThemeProvider>
+    );
 }
 
-export default App
+export default App;
