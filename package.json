@@ -22,8 +22,8 @@
     "@types/react-dom": "^18.2.7",
     "happy-dom": "^10.10.4",
     "typescript": "^5.1.6",
-    "vite": "^4.4.9",
+    "vite": "4.0.4",
     "vite-plugin-react": "^4.0.0",
-    "vitest": "^0.34.2"
+    "vitest": "0.33.0"
   }
 }
