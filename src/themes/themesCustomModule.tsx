@@ -3,46 +3,12 @@ export {};
 export interface FontOptions {
     fontSizes: {
         fontFamilyBase: string;
-        // TODO: remove landscape vs portrait for size now that we're using calc(vh + vw)
-        landscape: {
-            bodyXSmall: string;
-            bodySmall: string;
-            bodyMedium: string;
-            bodyLarge: string;
-            sidePanelXXSmall: string;
-            sidePanelXSmall: string;
-            sidePanelSmall: string;
-            sidePanelMedium: string;
-            sidePanelLarge: string;
-        };
-        portrait: {
-            bodyXSmall: string;
-            bodySmall: string;
-            bodyMedium: string;
-            bodyLarge: string;
-            sidePanelXXSmall: string;
-            sidePanelXSmall: string;
-            sidePanelSmall: string;
-            sidePanelMedium: string;
-            sidePanelLarge: string;
-        };
     };
-    fontWeightLight: string;
-    fontWeightBase: string;
-    fontWeightMedium: string;
-    fontWeightBold: string;
 }
 
 export interface SpacingOptions {
     lineHeightBase: string;
-    sidePanelPadding: string;
-    sidePanelPaddingPortrait: string;
-    sidePanelPaddingSmall: string;
-    sidePanelHeightPortrait: string;
-    // Headings
     headingsMarginBottom: string;
-
-    // Paragraph
     paragraphMarginBottom: string;
 }
 
@@ -59,7 +25,6 @@ declare module '@mui/material/styles/createTheme' {
         spacings: SpacingOptions;
     }
 
-    // allow configuration using `createMuiTheme`
     interface ThemeOptions {
         fonts: FontOptions;
         fontsMono: FontOptions;
