@@ -1,9 +1,9 @@
-import Button from './button/Button';
-import { ThemeProvider } from '@emotion/react'; // <- Emotion's ThemeProvider
 import React from 'react';
+import { ThemeProvider } from '@emotion/react'; // <- Emotion's ThemeProvider
 import { useAppStore } from './store';
 import { darkTheme } from './themes/dark.theme';
 import { lightTheme } from './themes/light.theme';
+import Button from './button/Button';
 
 function App() {
     const isDarkTheme = useAppStore((state) => state.isDarkTheme);
