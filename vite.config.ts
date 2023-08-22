@@ -1,9 +1,21 @@
-import * as reactPlugin from 'vite-plugin-react'
-import type { UserConfig } from 'vite'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
-const config: UserConfig = {
-  jsx: 'react',
-  plugins: [reactPlugin]
-}
+const isDev = process.env.NODE_ENV === 'development';
+const disableSourceMaps = process.env.DISABLE_SOURCEMAPS === 'true';
 
-export default config
+// https://vitejs.dev/config/
+export default defineConfig({
+    base: './',
+    plugins: [
+        react({
+            jsxImportSource: '@emotion/react',
+            babel: {
+                plugins: ['@emotion/babel-plugin'],
+            },
+        }),
+    ],
+    build: {
+        sourcemap: isDev ? true : !disableSourceMaps,
+    },
+});
