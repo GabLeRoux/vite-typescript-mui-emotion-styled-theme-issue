@@ -120,7 +120,26 @@ For a complete list of dependencies and versions, refer to [`package.json`](./pa
 
 ## Workaround
 
-Currently trying to figure it out, but I know that this used to work with previous versions of related packages.
+This problem was not happening before the following change:
+
+```diff
+--- a/package-lock.json
++++ b/package-lock.json
+@@ -23,9 +23,9 @@
+         "@types/react-dom": "^18.2.7",
+         "happy-dom": "^10.10.4",
+         "typescript": "^5.1.6",
+-        "vite": "4.0.4",
++        "vite": "^4.4.9",
+         "vite-plugin-react": "^4.0.0",
+-        "vitest": "0.33.0"
++        "vitest": "^0.34.2"
+       }
+     },
+     "node_modules/@ampproject/remapping": {
+```
+
+So freezing `vite` to `4.0.4` and `vitest` to `0.33.0` makes the test pass. I've looked at the changelogs here for `vite`: https://github.com/vitejs/vite/blob/main/packages/vite/CHANGELOG.md#410-2023-02-02 and I couldn't find what is causing this precisely.
 
 ---
 
