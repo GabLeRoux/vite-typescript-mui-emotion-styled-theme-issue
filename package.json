@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build"
+    "build": "tsc && vite build",
+    "test": "vitest"
   },
   "overrides": {
     "rollup": "2.74.1"
@@ -19,10 +20,13 @@
     "zustand": "^4.4.1"
   },
   "devDependencies": {
+    "@testing-library/react": "^14.0.0",
     "@types/react": "^18.2.20",
     "@types/react-dom": "^18.2.7",
+    "happy-dom": "^10.10.4",
     "typescript": "^5.1.6",
     "vite": "^4.4.9",
-    "vite-plugin-react": "^4.0.0"
+    "vite-plugin-react": "^4.0.0",
+    "vitest": "^0.34.2"
   }
 }
