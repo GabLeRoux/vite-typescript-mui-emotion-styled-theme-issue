@@ -1,5 +1,5 @@
-import { render } from '@testing-library/react';
 import React from 'react';
+import { render } from '@testing-library/react';
 import { ThemeProvider } from '@mui/material';
 
 import { lightTheme } from '../themes/light.theme';
