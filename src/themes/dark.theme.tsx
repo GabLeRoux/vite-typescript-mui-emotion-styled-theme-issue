@@ -16,6 +16,10 @@ export const darkTheme = createTheme({
             action: '#121212',
             custom: 'darkgray'
         },
+        svgFilter: '',
+        inactiveSvgFilter: '',
+        actionsMenuSvgFilter: '',
+        logoFilter: ''
     },
     fonts: fontOptions,
     fontsMono: fontMono,

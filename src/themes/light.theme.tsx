@@ -15,6 +15,10 @@ export const lightTheme = createTheme({
             action: '#e8e8e8',
             custom: 'pink',
         },
+        svgFilter: '',
+        inactiveSvgFilter: '',
+        actionsMenuSvgFilter: '',
+        logoFilter: ''
     },
     fonts: fontOptions,
     fontsMono: fontMono,
