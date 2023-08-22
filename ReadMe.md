@@ -99,6 +99,8 @@ Related files of interest:
 
 I'm using [Material UI Custom variables for themese](https://mui.com/material-ui/customization/theming/#custom-variables) and [Module augmentation](https://www.typescriptlang.org/docs/handbook/declaration-merging.html#module-augmentation) as linked from MUI's docs. The module augmentation happens here: [src/themes/themesCustomModule.tsx](./src/themes/themesCustomModule.tsx)
 
+The goal is to have a single theme file with properties from MUI and custom properties for our app's customizations.
+
 ## Steps to reproduce
 
 1. Clone this repository.
