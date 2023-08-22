@@ -18,7 +18,7 @@
   },
   "devDependencies": {
     "@testing-library/react": "^14.0.0",
-    "@types/react": "^18.2.20",
+    "@types/react": "^18.2.21",
     "@types/react-dom": "^18.2.7",
     "happy-dom": "^10.10.4",
     "typescript": "^5.1.6",
