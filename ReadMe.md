@@ -90,6 +90,15 @@ TypeError: Cannot read properties of undefined (reading 'backgrounds')
    Duration  2.71s (transform 667ms, setup 0ms, collect 3.17s, tests 47ms, environment 502ms, prepare 297ms)
 ```
 
+Related files of interest:
+
+* [src/button/Button.styled.tsx](./src/button/Button.styled.tsx)
+* [src/button/Button.test.tsx](./src/button/Button.test.tsx)
+
+## What the code attempts to do (theme and button)
+
+I'm using [Material UI Custom variables for themese](https://mui.com/material-ui/customization/theming/#custom-variables) and [Module augmentation](https://www.typescriptlang.org/docs/handbook/declaration-merging.html#module-augmentation) as linked from MUI's docs. The module augmentation happens here: [src/themes/themesCustomModule.tsx](./src/themes/themesCustomModule.tsx)
+
 ## Steps to reproduce
 
 1. Clone this repository.
