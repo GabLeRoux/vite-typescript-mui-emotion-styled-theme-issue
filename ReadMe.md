@@ -1,13 +1,13 @@
 # Vite TypeScript MUI Emotion Styled Theme Issue
 
-This repository is a minimal reproduction of an issue involving `vite`, `typescript`, `@mui/material`, `@emotion/styled` and theme.
+This repository is a minimal reproduction of an issue involving `vite`, `typescript`, `@mui/material`, `@emotion/styled` and custom variables in themes that happens after updating `vite`.
 
 **This project relates to the following issue:**  
 https://github.com/vitejs/vite/issues/14176
 
 ## Problem Description
 
-When running tests, there's an error that occurs with theme properties being undefined. This seems to involve a combination of `@emotion/styled` and `@mui/material` theme provider.
+When running tests after upgrading `vite`, there's an error that occurs with theme properties being undefined (only in tests). This seems to involve a combination of `@emotion/styled` and `@mui/material` theme provider.
 
 Error during testing:
 
@@ -100,7 +100,7 @@ Related files of interest:
 
 ## What the code attempts to do (theme and button)
 
-I'm using [Material UI Custom variables for themese](https://mui.com/material-ui/customization/theming/#custom-variables) and [Module augmentation](https://www.typescriptlang.org/docs/handbook/declaration-merging.html#module-augmentation) as linked from MUI's docs. The module augmentation happens here: [src/themes/themesCustomModule.tsx](./src/themes/themesCustomModule.tsx)
+I'm using [Material UI Custom variables for themes](https://mui.com/material-ui/customization/theming/#custom-variables) and [Module augmentation](https://www.typescriptlang.org/docs/handbook/declaration-merging.html#module-augmentation) as linked from MUI's docs. The module augmentation happens here: [src/themes/themesCustomModule.tsx](./src/themes/themesCustomModule.tsx)
 
 The goal is to have a single theme file with properties from MUI and custom properties for our app's customizations.
 
