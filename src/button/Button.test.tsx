@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { ThemeProvider } from '@mui/material';
+import { ThemeProvider } from '@emotion/react';
 
 import { lightTheme } from '../themes/light.theme';
 import Button from './Button';
@@ -10,6 +10,8 @@ describe('<Button />', () => {
 
     it('should render correctly with dark theme', () => {
         const toggleThemeMock = () => {};
+
+        const x = lightTheme;
 
         const view = render(
             <ThemeProvider theme={lightTheme}>
